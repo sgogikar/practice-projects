@@ -1,0 +1,24 @@
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+lower_case_name1= name1.lower()
+lower_case_name2= name2.lower()
+#counting how many letter of TRUE and LOVE are available in both the names by using Count()
+x = lower_case_name1.count("t")+lower_case_name1.count("r")+lower_case_name1.count("u")+lower_case_name1.count("e")+lower_case_name2.count("t")+lower_case_name2.count("r")+lower_case_name2.count("u")+lower_case_name2.count("e")
+y= lower_case_name1.count("l")+lower_case_name1.count("o")+lower_case_name1.count("v")+lower_case_name1.count("e")+lower_case_name2.count("l")+lower_case_name2.count("o")+lower_case_name2.count("v")+lower_case_name2.count("e")
+# another way of doing this would be to first concatenate two names and use lower() to change them all to lower case
+scorea = str(x)+str(y)
+score = int(scorea)
+print(score)
+if score<10 or score>90:
+    message= "your score is x, you go together like coke and soda"
+if score>=40 and score<=50:
+    message= "you are alright together"
+else: 
+    message = "your score is z"
+print(message)
+

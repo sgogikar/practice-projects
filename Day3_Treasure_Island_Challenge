@@ -32,6 +32,8 @@ entry = entry1.casefold()
 if entry == "right":
   print("Game Over!")
 elif entry == "left":
+    # print("you've come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim accross.") - this obviously will result in a syntax error. Use single quotes instead 'and ' \ to avoid this problem in future.
+  print('you\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim accross.')
   stage2= (input("swim or wait?")).casefold()
   if stage2 == "swim":
     print("attacked by trout, GAME OVER!")

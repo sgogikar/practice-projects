@@ -1,0 +1,8 @@
+#this is another example of how index (indices - plural) work 
+
+fruits=["a","c","d","e","f"]
+veggies=["spinach", "kale","cucumber"]
+dirty_dozen=[fruits,veggies]
+print(dirty_dozen[1][1])
+print(dirty_dozen[1])
+

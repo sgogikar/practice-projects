@@ -1,0 +1,17 @@
+# Import the random module here
+import random
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+x= len(names)
+
+#to understand in detail the concenpt of index we are going by the method of substracting 1 out of the total length, as the index values alwasy strat from 0. if the total len() is 4 then 3 will be the last index! 
+index_number= random.randint(0,x-1)
+
+#person is the random number 
+person_to_pay = names[index_number] #here we are usign that random number as an index
+print(f"{person_to_pay} will pay today's bill")
+

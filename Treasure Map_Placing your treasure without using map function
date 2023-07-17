@@ -1,0 +1,44 @@
+
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","️⬜️","️⬜️"]
+row3 = ["⬜️","️⬜️","️⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+
+#methodology of how this is solved *really important to know
+# the input we get is a string. example 23 i.e. position[0] and position[1]
+# now split the string so that we end up with a horizontal and vertical position to where this mapping is marked as X
+# considering input 23 Second Column 3rd Row
+horizontal = int(position[0]) #2
+vertical = int(position[1]) #3
+
+#remember dirty_dozen example always the vertical position is considered. Becuase horizontal is [0]
+
+# print(map[vertical])
+
+#this will give you an IndexError: list index out of range because in our input 23. Vertical 3 will be considered.
+# Clearly in the map = [row1, row2, row3] we only have indices 0,1 and 2 hence the index is out of range
+# to resolve this issue
+
+print(map[vertical-1]) # if (column) Vertical valuve matches 3, AS WE ONLY HAVE *** 3X3 COORDINATES!!!
+
+#now in order to select a row valuve i.e. horizontal value
+
+selected_row = map[vertical-1] #Once we gotten hold of the row 3 if the input is 23
+# we are taking this value of the row and shift it down by 1 in order for it to work
+# as all of our rows start with 0 index
+selected_row[horizontal-1] = 'X'
+
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+#put this in Thonny and understand it thoroughly!!!

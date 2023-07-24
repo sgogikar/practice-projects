@@ -1,0 +1,46 @@
+#You are going to write a program that calculates the average student height from a List of heights.
+# e.g. student_heights = [180, 124, 165, 173, 189, 169, 146]
+# The average height can be calculated by adding all the heights together and dividing by the total number of heights.
+# e.g.
+# 180 + 124 + 165 + 173 + 189 + 169 + 146 = 1146
+# There are a total of 7 heights in student_heights
+# 1146 ÷ 7 = 163.71428571428572
+# Average height rounded to the nearest whole number = 164
+# Important You should not use the sum() or len() functions in your answer. You should try to replicate their functionality using what you have learnt about for loops.
+# 🚨 Don't change the code below 👇
+student_heights = input("Input a list of student heights ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+print(student_heights)
+# 🚨 Don't change the code above 👆
+
+
+#Write your code below this row 👇
+# here you can easily use total_height = sum(student_heights)
+# and for average_height: Calculate len(student_heights) and then sum(student_heights)/len(student_heights)
+# but if you don't want to use len() or sum() You can use for loop in this fashion
+
+# WKT: total_height = sum(student_heights), SO WE START OFF WITH 
+
+total_height = 0 
+for height in student_heights: #to loop through each of the heights entered in the input we are going to keep adding them to our initial value total_height = 0 
+  total_height = total_height + height #if you list has 3, 4, 5 first 0 will be added to 3 then the total_height will be 3, then this 3 will be added to 4, then the result will  be added to the next value until the last value is added. 
+print(total_height) #see how the print is out of indentation. because the total value initially was 0 and after applying a for loop or total value is changed. 
+
+#now similarly to calculate the number of students 
+#we set a value 0 to the variable number_of_students and keep incrementing this value with 1 to obtain the total number of students [in short you are counting the total number of students by adding 1 in increments]
+
+number_of_students = 0 
+for student in student_heights: 
+  number_of_students = number_of_students+1 #if the indentation of the print is within the for loop, it  will  simply display the palce value or the index of the entered numbers as 1 2 3 because a value is added to every entry. For the 1st entery 0 is added returns 1, for the second entry 1 is added returns 2 and for the third entry 1 is added returns 3. IF THE PRINT IS INDENTED OUTSIDE OF THE FOR LOOP, IT WILL PRINT OUT THE VALUES RETURNED UPON EXECUTING THE number_of_students which was initially 0 with a for loop where that 0 was incremented with 1 for the number of entries in that list. If the list has 4 entries, the printed value will be 4. Where in the previous for loop it wasn't incremented by 1 it was incremented by the first value in the list, that is the IMPORTANT DISTINCTION! 
+print(number_of_students)  
+
+#YOU SEE how each of the items are called different in each list, for the items in the list of first for loop we called them "height" and the second one we called "student" you call them the whatever or even the same name but for a code to look clean - you need to make them readable and simple to identify what is that variable you creat represents in this case and in fact in everycase it would be a good practice to call them in a singular form of the listed items.
+
+# for example in the fruits list 
+# fruits = ["apple", "peach", "pear"]
+#number_of_fruits=0
+#for fruit in fruits: <- see how we are creating a variable called fruit(singular form of the listed input type "fruits")
+#   number_of_fruits =number_of_fruits + 1 will give you the total number of fruits
+
+print(round(total_height/number_of_students))

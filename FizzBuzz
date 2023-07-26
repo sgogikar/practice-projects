@@ -1,0 +1,18 @@
+#Write your code below this row 👇
+#i absolutely love how i solved this smoothly. 
+# simple conditions. 
+# step1: as angela said use a singular form of your data, our data has numbers hence number 
+# if that number is divisible by 3 it is fizz and if it is divisibly by 5 it is buzz, if both fizzbuzz and if nothing print number. 
+# i did in in the same order got different results and hence i debugged the process flow and placed the and condition as my first condition. 
+
+for number in range(1,101):
+    if number%3 == 0 and number%5==0:
+        print("FizzBuzz")
+    elif number%3==0:
+        print("Fizz")
+    elif number%5==0:
+        print("Buzz")    
+    else: 
+        print(number)
+
+#successfully completed!!! 

@@ -1,0 +1,36 @@
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+def jump():
+    move()
+    turn_left()
+    turn_left()
+    turn_left()
+    move()
+ 
+    turn_right()
+    move()
+    turn_left()
+#Reeborg will jump if it sees a hurdle until at_goal is True. 
+while at_goal()!=True:
+    if front_is_clear()==True: 
+        move()
+    else:
+        turn_left()
+        jump()
+        
+
+
+    
+   
+     
+
+
+
+    
+
+    
+

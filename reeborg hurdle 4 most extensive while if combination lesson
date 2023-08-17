@@ -1,0 +1,28 @@
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+#this is how you define one whole jump including once landed turn to left 
+def jump():
+#reebord needs to GO UP when it sees a wall on right
+    turn_left()
+    while wall_on_right():
+        move()
+#reeborg makes a turn here 
+    turn_right()
+    move()
+    turn_right()
+#now the reeborg needs to come down
+    while front_is_clear():
+        move()
+#it will move as long as this while is True, when the front_is_clear!=True the reeborg will turn_left 
+    turn_left()
+
+    
+#Reeborg will jump if it sees a hurdle until at_goal is True. 
+while at_goal()!=True:
+    if front_is_clear()==True: 
+        move()
+    else:
+        jump()
+        
